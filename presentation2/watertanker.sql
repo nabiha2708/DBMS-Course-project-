@@ -545,9 +545,7 @@ INSERT INTO Complaint
 
 
 -- =====================================================
--- REQUIRED QUERY
--- Display customer names where booking is Pending
--- and remark is Residential
+Query Executed during presentation 2 
 -- =====================================================
 
 SELECT c.name AS customer_name,
@@ -559,16 +557,3 @@ WHERE b.status = 'Pending'
 AND b.remarks = 'Residential';
 
 
--- =====================================================
--- OPTIONAL CHECK
--- =====================================================
-
-SELECT * FROM Booking;
-
-SELECT COUNT(*) AS total_customers
-FROM Customer;
-
-SELECT COUNT(*) AS pending_residential_bookings
-FROM Booking
-WHERE status = 'Pending'
-AND remarks = 'Residential';
